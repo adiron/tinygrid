@@ -1,0 +1,45 @@
+// A little sass grid, inspired by 960gs, except any damn size you want and in SASS.
+// Use is pretty straightforward.
+
+// Main features:
+// * RTL support! Set rtl to true.
+// * Ability to define a grid system based on the width
+//   of the whole container. Just set $from-total: true;
+//   and it will use the width as a total width.
+
+// Missing features:
+// * Push/pull (I don't like them)
+// * Alpha/omega (set them if you need them)
+
+@mixin grid_container($cols: 6, $width: 120px, $gutter: 5px, $from-total: false, $rtl: false) {
+	$total-width: 0;
+	@if $from-total {
+		$total-width: $width;
+		$col-width: ($total-width - 2 * $cols * $gutter) / $cols;
+	} @else {
+		$total-width: $gutter * (2 * $cols) + ($width * $cols);
+		$col-width: $width;
+	}
+
+	$dir: "";
+	@if $rtl {
+		$dir: right;
+	} @else {
+		$dir: left;
+	}
+
+	width: $total-width;
+	margin: 0;
+
+	@for $i from 1 through $cols {
+		.grid_#{$i} {
+			width: ($i * $width) + ($gutter * (($i - 1) * 2));
+			float: $dir;
+			margin: 0 $gutter;
+		}
+		.prefix_#{$i} {
+			margin-#{$dir}: ($i * $width) + (($i * 2) * $gutter) + $gutter;
+			float: left;
+		}
+	}
+}
