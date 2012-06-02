@@ -29,7 +29,6 @@
 	}
 
 	width: $total-width;
-	margin: 0;
 
 	@for $i from 1 through $cols {
 		.grid_#{$i} {
