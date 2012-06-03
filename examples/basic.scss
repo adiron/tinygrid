@@ -1,0 +1,10 @@
+@import "../tinygrid.scss";
+
+.container_6 {
+	@include grid_container(6, 80%, 2%, true);
+	background-color: #BAC0D8;
+	> div {
+		background-color: #A7EFF8;
+		margin-bottom: 20px !important;
+	}
+}

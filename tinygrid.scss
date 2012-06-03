@@ -13,9 +13,10 @@
 
 @mixin grid_container($cols: 6, $width: 120px, $gutter: 5px, $from-total: false, $rtl: false) {
 	$total-width: 0;
+	$col-width: 0;
 	@if $from-total {
 		$total-width: $width;
-		$col-width: ($total-width - 2 * $cols * $gutter) / $cols;
+		$col-width: ($total-width - (2 * $cols * $gutter)) / $cols;
 	} @else {
 		$total-width: $gutter * (2 * $cols) + ($width * $cols);
 		$col-width: $width;
@@ -32,12 +33,12 @@
 
 	@for $i from 1 through $cols {
 		.grid_#{$i} {
-			width: ($i * $width) + ($gutter * (($i - 1) * 2));
+			width: ($i * $col-width) + ($gutter * (($i - 1) * 2));
 			float: $dir;
 			margin: 0 $gutter;
 		}
 		.prefix_#{$i} {
-			margin-#{$dir}: ($i * $width) + (($i * 2) * $gutter) + $gutter;
+			margin-#{$dir}: ($i * $col-width) + (($i * 2) * $gutter) + $gutter;
 			float: left;
 		}
 	}

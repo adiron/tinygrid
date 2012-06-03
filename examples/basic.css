@@ -1,0 +1,48 @@
+.container_6 {
+  width: 80%;
+  background-color: #BAC0D8; }
+  .container_6 .grid_1 {
+    width: 9.333%;
+    float: left;
+    margin: 0 2%; }
+  .container_6 .prefix_1 {
+    margin-left: 15.333%;
+    float: left; }
+  .container_6 .grid_2 {
+    width: 22.667%;
+    float: left;
+    margin: 0 2%; }
+  .container_6 .prefix_2 {
+    margin-left: 28.667%;
+    float: left; }
+  .container_6 .grid_3 {
+    width: 36%;
+    float: left;
+    margin: 0 2%; }
+  .container_6 .prefix_3 {
+    margin-left: 42%;
+    float: left; }
+  .container_6 .grid_4 {
+    width: 49.333%;
+    float: left;
+    margin: 0 2%; }
+  .container_6 .prefix_4 {
+    margin-left: 55.333%;
+    float: left; }
+  .container_6 .grid_5 {
+    width: 62.667%;
+    float: left;
+    margin: 0 2%; }
+  .container_6 .prefix_5 {
+    margin-left: 68.667%;
+    float: left; }
+  .container_6 .grid_6 {
+    width: 76%;
+    float: left;
+    margin: 0 2%; }
+  .container_6 .prefix_6 {
+    margin-left: 82%;
+    float: left; }
+  .container_6 > div {
+    background-color: #A7EFF8;
+    margin-bottom: 20px !important; }

@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Testing the grid.</title>
+</head>
+	<link rel="stylesheet" href="basic.css">
+<body>
+	<div class="container_6">
+		<div class="grid_4">
+			This is a 6 column grid system based on the width value of "80%" being the total.
+		</div>
+		<div class="grid_2">
+			Below are some tests.
+		</div>
+		<div class="grid_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</div>
+		<div class="grid_2">
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div class="grid_2">
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+		<div class="grid_6">
+			Code used to generate this example:
+			<pre>
+.container_6 {
+	@include grid_container(6, 80%, 2%, true);
+	background-color: #BAC0D8;
+	> div {
+		background-color: #A7EFF8;
+		margin-bottom: 20px !important;
+	}
+}
+			</pre>
+		</div>
+	</div>
+</body>
+</html>
