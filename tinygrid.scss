@@ -8,8 +8,7 @@
 //   and it will use the width as a total width.
 
 // Missing features:
-// * Push/pull (I don't like them)
-// * Alpha/omega (set them if you need them)
+// * Push/pull (I don't like them and don't see a point.)
 
 @mixin grid_container($cols: 6, $width: 120px, $gutter: 5px, $from-total: false, $rtl: false) {
 	$total-width: 0;
@@ -25,8 +24,12 @@
 	$dir: "";
 	@if $rtl {
 		$dir: right;
+		.alpha {margin-right: 0;}
+		.omega {margin-left: 0;}
 	} @else {
 		$dir: left;
+		.alpha {margin-left: 0;}
+		.omega {margin-right: 0;}
 	}
 
 	width: $total-width;
